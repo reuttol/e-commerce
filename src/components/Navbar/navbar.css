@@ -1,0 +1,58 @@
+.navbar-container{
+    display: flex;
+    height: 10vh;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: cornflowerblue;
+    padding: 0 1.5rem;
+}
+
+.links{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navbar-container a{
+    text-decoration: none;
+    color: white;
+    /* height: 100%; */
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 0;
+}
+.navbar-container a::before{
+    content: "";
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    border-top: solid white 2px;
+}
+.navbar-container a:hover::before{
+    transform: translateX(100%);
+    transition: all 0.3s;
+}
+
+.navbar-container a::after{
+    content: "";
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-bottom: solid white 2px;
+}
+.navbar-container a:hover::after{
+    transform: translateX(-100%);
+    transition: all 0.3s;
+}
+
+.cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
